@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Tarefa</title>
+</head>
+<body>
+  <h1>Editar Tarefa</h1>
+  <form action="{{ url_for('editar_tarefa', tarefa_antiga=tarefa_antiga) }}" method="post">
+    <label for="tarefa">Nova Tarefa:</label>
+    <input type="text" id="tarefa" name="tarefa" value="{{ tarefa_antiga }}" required>
+    <button type="submit">Salvar Alterações</button>
+  </form>
+</body>
+</html>
